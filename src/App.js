@@ -1,5 +1,6 @@
 
 import './App.css';
+// bootstrap added 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Player from './components/Player/Player';
 import PlayersData from './PlayerData/Players.json'
@@ -7,6 +8,7 @@ import { useEffect, useState } from 'react';
 import Selection from './components/Selection/Selection';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClipboardCheck } from '@fortawesome/free-solid-svg-icons';
+import Header from './components/Header/Header';
 function App() {
   const [Players,setPlayers] = useState([]);
 
@@ -28,12 +30,16 @@ function App() {
   }
 
   return (
-    // Header area 
+    
+    
+    <div className="app">
 
+  {/* // Header area  */}
+    <Header></Header>
 
-    // All player data as card items 
-    <div className="row">
-      <div className="all-players-container container col-md-8 d-flex flex-wrap">
+    {/* // All player data as card items  */}
+    <div className="row pt-5">
+      <div className="all-players-container container col-md-8 d-flex flex-wrap px-3">
       {
         Players.map( player => <Player key={player.id} handleAddButton={handleAddButton} detail ={player}></Player>)
       }
@@ -54,6 +60,7 @@ function App() {
 
     
      
+    </div>
     </div>
   );
 }
