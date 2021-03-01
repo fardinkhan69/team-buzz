@@ -52,7 +52,7 @@ function App() {
             selectedPlayer.map(player => <Selection detail={player}></Selection>)
           }
 
-          <h3>Total :{totalSalary} </h3>
+          <h3>Total Budget:{totalSalary} </h3>
 
         </div>
       </div>
