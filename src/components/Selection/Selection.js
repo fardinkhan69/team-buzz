@@ -1,5 +1,5 @@
 import React from 'react';
-
+// selected player component
 const Selection = (props) => {
 
     const {name,salary} =props.detail;

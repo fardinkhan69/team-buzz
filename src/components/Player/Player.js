@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPlus } from '@fortawesome/free-solid-svg-icons'
 // import Card from 'react-bootstrap/Card';
 // import Button from 'react-bootstrap/Button'
+
+// all the player card component
 const Player = (props) => {
     const style ={
         width: "18rem",

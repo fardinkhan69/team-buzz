@@ -14,6 +14,7 @@ function App() {
 
   const [selectedPlayer,setselectedPlayer] = useState([]);
 
+  // add player to team button
   const handleAddButton = (addedPlayer) =>{
       let newselectedPlayer = [...selectedPlayer,addedPlayer];
       setselectedPlayer(newselectedPlayer);
@@ -22,7 +23,7 @@ function App() {
     setPlayers(PlayersData);
     //console.log(PlayersData)
   },[]);
-
+// calculating total budget to buy the team
   let totalSalary = 0;
   for (let i = 0; i < selectedPlayer.length; i++) {
     const selectPlayer = selectedPlayer[i];
@@ -46,7 +47,9 @@ function App() {
       </div>
 
       <div className="selected-players-container col-md-4">
+        
         <h2><FontAwesomeIcon icon={faClipboardCheck} /> selected Players : {selectedPlayer.length} {console.log(selectedPlayer)} </h2>
+        {/* Passing selected player data  */}
         <div className="selected-player">
           {
             selectedPlayer.map(player => <Selection detail={player}></Selection>)
